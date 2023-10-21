@@ -38,7 +38,6 @@ blockquote > footer > img {
     max-width: 100%;
 }
 
-
 .flex{
     display: flex;
     flex-direction: column;
@@ -59,17 +58,35 @@ blockquote > footer > img {
     justify-content: flex-end;
 }
 
-.grid .bloc {
-    min-height: 200px;
-    padding: 5px;
-}
-
 .flex .one{flex-basis: 75%;}
 .flex .two{flex-basis: 35%; align-self: flex-end;}
 .flex .three{flex-basis: 25%;}
 .flex .four{flex-basis: 75%;}
 
-.one {grid-area: one;}
-.two {grid-area: two;}
-.three {grid-area: three;}
-.four {grid-area: four;}
+.grid .row {
+  min-height: 200px;
+  padding: 5px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid.un, .grid.deux, .grid.trois, .grid.quatre {
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #000; 
+}
+
+.grid.un {grid-area: one;}
+.grid.deux {grid-area: two;}
+.grid.trois {grid-area: three;}
+.grid.quatre {grid-area: four;}
