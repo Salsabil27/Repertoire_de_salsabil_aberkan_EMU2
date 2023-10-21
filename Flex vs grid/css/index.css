@@ -1,0 +1,76 @@
+/* box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*container*/
+/* snippet container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1520px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* blockquote */
+blockquote {
+  margin: 0;
+  font-size: 16px;
+}
+
+blockquote > p { margin: 0 0 15px; }
+
+blockquote > footer { 
+  font-weight: bold; 
+  display: flex;
+  align-items: center;
+}  
+
+blockquote > footer > img {
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.bloc img {
+    max-width: 100%;
+}
+
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+.bloc {
+    min-height: 200px;
+    padding: 5px;
+}
+.bloc.three {
+  margin-left: 7%;
+}
+.ligne {
+    display: flex;
+    gap: 0px 30px;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+.grid .bloc {
+    min-height: 200px;
+    padding: 5px;
+}
+
+.flex .one{flex-basis: 75%;}
+.flex .two{flex-basis: 35%; align-self: flex-end;}
+.flex .three{flex-basis: 25%;}
+.flex .four{flex-basis: 75%;}
+
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+.four {grid-area: four;}
