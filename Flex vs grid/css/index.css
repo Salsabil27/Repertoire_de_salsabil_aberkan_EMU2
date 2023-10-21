@@ -86,7 +86,7 @@ blockquote > footer > img {
   border: 1px solid #000; 
 }
 
-.grid.un {grid-area: one;}
-.grid.deux {grid-area: two;}
-.grid.trois {grid-area: three;}
-.grid.quatre {grid-area: four;}
+.one {grid-area: one;}
+.two {grid-area: two;}
+.three {grid-area: three;}
+.four {grid-area: four;}
