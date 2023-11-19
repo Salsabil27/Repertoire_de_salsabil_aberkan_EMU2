@@ -7,44 +7,67 @@
   <title>Exercice Landingpage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    #accueil {
+      position: relative;
+      text-align: center;
+    }
+
+    #texte-sur-image {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: left;
+    }
+
+    #texte-sur-image h2 {
+      background-color: #dc3545; 
+      margin-bottom: 0;
+      display: block;
+    }
+
+    #texte-sur-image h3 {
+      font-size: 18px;
+      background-color: #9c9c9c;  
+      margin-bottom: 0; 
+      display: block;
+    }
+  </style>
 </head>
 <body>
   
-  <h1>SuperShoes</h1>
-<li><a href="#">Accueil</a></li>
-<li><a href="#">À propos</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Contact</a></li>
-
-<hgroup id="accueil">
-<h2>Ici, on répare vos chaussures</h2>
-<h3>pour que vous repartiez du bon pied</h3>
-</hgroup>
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger  navbar-dark">
+    <a class="navbar-brand" href="#">SuperShoes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <li class="nav-item active">
+          <a class="nav-link " href="#">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link disabled" href="#">À propos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled" href="#">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link disabled" href="#">Contact</a>
         </li>
       </ul>
     </div>
+  </nav>
+
+<div id="accueil">
+  <img src="images/cordonnier.jpg" class="img-fluid w-100" alt="Image d'accueil">
+  <div id="texte-sur-image">
+    <h2>Ici, on répare vos chaussures</h2>
+    <h3>pour que vous repartiez du bon pied</h3>
   </div>
-</nav>
+</div>
 
 
 
@@ -53,13 +76,13 @@
 
 
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt reprehenderit hic eligendi assumenda quos animi consequatur tenetur atque nam. Quos aspernatur placeat fuga excepturi veritatis eos eveniet nemo magni facere.</p>
-<img src="images/about.jpg" alt="cordonnier au travail">
+<img src="images/about.jpg" class="rounded float-end"  alt="cordonnier au travail">
 
 
 
 <h2>Nos services</h2>
 <div class="card">
-  <img src="images/about.jpg" class="card-img-top" alt="cordonnier">
+
   <div class="card-body">
     <div class="d-flex flex-row mb-3">
       <div class="p-2"><div class="card" style="width: 18rem;">
@@ -88,25 +111,47 @@
     </div>
     </div>
     </div>
+ </div>
+</div>
 
-
-
+<main class="container mx-auto">
+  <div class="row g-0 bg-body-secondary position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://maps.google.com/maps?q=bruxellesisfsc&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="400"></iframe>
+      </div>
+    </div>
     
+    <div class="col-md-6 p-4 ps-md-0">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Votre nom et prénom</label>
+        <input type="NomPrenom" class="form-control" id="exampleFormControlInput1" placeholder="">
+      </div>
+      
+      <select class="form-select mb-3" aria-label="Default select example">
+        <option selected>Sujet</option>
+        <option value="1">Choisissez un sujet</option>
+        <option value="2">Demande de devis</option>
+        <option value="3">Question</option>
+        <option value="4">Autres</option>
+      </select>
+      
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      
+      <button type="button" class="btn btn-primary">Envoyer</button>
+    </div>
+  </div>
+</main>
 
+<footer class="text-bg-secondary p-2 text-center">
+&copy; SuperShoes 2020, tous droits résérvés
+</footer>
 
-
-Contactez-nous
-[=== form ===]
-    Votre nom et prénom
-    [=== input ===]
-    Sujet
-    [=== select ===]
-        Choisissez un sujet
-        Demande de devis
-        Question
-        Autres
-    [=== /select ===]
-    Votre message
-    [=== textarea ===]
-    [=== button submit ===]
-... (10 lignes restantes)
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
